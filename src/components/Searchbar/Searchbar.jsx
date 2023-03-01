@@ -31,8 +31,6 @@ export class Searchbar extends React.Component {
         return (
             <Header className="searchbar">
                 <SearchForm onSubmit={handleSubmit} className="form">
-                    <ButtonSubmit type="submit" className="button">Search</ButtonSubmit>
-
                     <Input
                         className="input"
                         type="text"
@@ -42,6 +40,7 @@ export class Searchbar extends React.Component {
                         onChange={handleChange}
                         value={query}
                     />
+                    <ButtonSubmit type="submit" className="button">Search</ButtonSubmit>
                 </SearchForm>
             </Header>
         );
