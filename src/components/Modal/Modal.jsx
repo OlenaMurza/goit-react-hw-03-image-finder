@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { Overlay, ModalViewer, ModalImg } from '../Modal/Modal.styled';
 
+
 const modalRoot = document.querySelector('#modal-root');
 
 export class Modal extends React.Component {
@@ -23,16 +24,12 @@ export class Modal extends React.Component {
 
   render() {
     const { closeModal, tags, modalImg } = this.props;
-
-    return createPortal (
-      <Overlay onClick={closeModal}>
-        <ModalViewer>
-          <ModalImg src={modalImg} alt={tags} />
-        </ModalViewer>
-      </Overlay>,
+   
+    return createPortal(
+      <Overlay onClick={closeModal}><ModalViewer><ModalImg src={modalImg} alt={tags} /></ModalViewer></Overlay>,
       modalRoot
     );
-  }
+  } 
 }
 
 Modal.propTypes = {
@@ -40,3 +37,4 @@ Modal.propTypes = {
   closeModal: PropTypes.func.isRequired,
   tags: PropTypes.string.isRequired,
 };
+

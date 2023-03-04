@@ -13,11 +13,11 @@ export class App extends React.Component {
     query: '',
     images: [],
     page: 1,
-    isLoading: false,
     totalHits: 0,
-  }
+    isLoading: false,
+  };
 
-async componentDidUpdate(_, prevState) {
+  async componentDidUpdate(_, prevState) {
     const { query, page } = this.state;
 
     if (prevState.query !== query || prevState.page !== page) {
@@ -66,6 +66,7 @@ async componentDidUpdate(_, prevState) {
         {images && <ImageGallery images={images} />}
         {!!totalHits && <Button onLoadMore={handleLoadMore} />}
         {isLoading && <Loader />}
+
         <ToastContainer autoClose={2000} />
       </>
     );
