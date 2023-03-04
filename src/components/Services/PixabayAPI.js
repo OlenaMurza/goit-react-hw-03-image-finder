@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const searchParams = new URLSearchParams({
-key: '33118592-fe55a1628e08196b0e966d7a0',
+  key: '33118592-fe55a1628e08196b0e966d7a0',
   image_type: 'photo',
   orientation: 'horizontal',
   per_page: 12,
@@ -15,3 +15,4 @@ export const fetchImages = async (query, page) => {
 
   return data;
 };
+

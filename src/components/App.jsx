@@ -1,12 +1,12 @@
 import React from 'react';
-import { Searchbar } from './Searchbar/Searchbar';
-import { ImageGallery } from './ImageGallery/ImageGallery';
-import { Button } from './Button/Button';
-import { Loader } from './Loader/Loader';
+import { Searchbar } from '../components/Searchbar/Searchbar';
+import { ImageGallery } from '../components/ImageGallery/ImageGallery';
+import { Button } from '../components/Button/Button';
+import { Loader } from '../components/Loader/Loader';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
-import { fetchImages } from './Services/PixabayAPI';
+import { fetchImages } from '../components/Services/PixabayAPI';
 
 export class App extends React.Component {
   state = {
@@ -66,7 +66,6 @@ async componentDidUpdate(_, prevState) {
         {images && <ImageGallery images={images} />}
         {!!totalHits && <Button onLoadMore={handleLoadMore} />}
         {isLoading && <Loader />}
-
         <ToastContainer autoClose={2000} />
       </>
     );

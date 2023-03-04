@@ -18,10 +18,26 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+:root {
+  --accent: #6a9bd8;
+  --color: #fff;
+   --overlay: rgba(40, 40, 40, 0.65);
+  --secondary: #858585;
+  --bg: #0000CD;
+    --inset-shadow: inset -2px -2px 5px #ffffff,
+    inset 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
