@@ -25,6 +25,10 @@ export class Searchbar extends React.Component {
     }
 
     onSubmit(query);
+    this.reset();  
+  };
+   reset = () => {
+    this.setState({ query: '' });
   };
 
   render() {
